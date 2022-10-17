@@ -3,17 +3,14 @@ import { setupCounter } from './counter'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <body>
-
-<h1>Weather VIP<h1>
-  <div class="formular">
-    <input type="text" class="search-bar">
-    <button type="button" class="btn">SUBMIT</button>
-  <div>
-  <div class="weather">
-    <h2 class="weather-in">Bratislava<h2>
-  <div>
-
-<body>
+<div class="container">
+	<h2 class="nadpis">Weather VIP<h2>
+	<div class="formular">
+		<input type="text" class="search-bar" placeholder="Search for a city... ">
+    	<button type="button" class="btn">submit</button>
+	</div>
+</div>
+</body>
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
