@@ -13,11 +13,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 </body>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '265458dc26mshd71e846de467509p1b1d2ajsn1a506b5793a0',
+		'X-RapidAPI-Key': '7086ebf5a7mshfdff4f9d6868d3ep193a9bjsna773559ed875',
 		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
 	}
 };
