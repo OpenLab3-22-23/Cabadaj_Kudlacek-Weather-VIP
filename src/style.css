@@ -3,8 +3,7 @@
 body{
  background-color: #170a1c;
  margin: 0px;
- font-family: 'Titillium Web', sans-serif;
- background-image: url("pozadie.png");
+font-family: 'Titillium Web',sans-serif;
 }
 .container{
  max-width: 1140px;
@@ -58,4 +57,8 @@ body{
     opacity: 0.5;
     margin-inline: auto;
 
+}
+.city{
+    font-size: 30px;
+    margin-bottom: 0px;
 }

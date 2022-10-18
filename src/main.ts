@@ -1,5 +1,5 @@
 import './style.css'
-import { setupCounter } from './counter'
+
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <body>
@@ -11,6 +11,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 	</div>
 
 	<div class="today">
+		<h4 class="city">Bratislava</h4>
+		<div class="celsius">19°C</div>
+		<div class="temp">Sunny</div>
+		<div class="days">18.10.2022</div>
 	</div>
 	
 </div>
