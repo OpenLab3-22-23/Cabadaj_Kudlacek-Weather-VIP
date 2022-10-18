@@ -9,6 +9,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 		<input type="text" class="search-bar" placeholder="Search for a city... ">
     	<button type="button" class="btn">submit</button>
 	</div>
+
+	<div class="today">
+	</div>
+	
 </div>
 </body>
 `
