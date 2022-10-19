@@ -15,7 +15,27 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 		<div class="celsius">19°C</div>
 		<div class="temp">Sunny</div>
 		<div class="days">18.10.2022</div>
-	</div>
+
+		<div class="cover">
+			<div class="box">
+				<h4 class="day">Wednesday</h4>
+				<h4 class="value">20°C</h4>
+			</div>
+			<div class="box">
+				<h4 class="day">Thursday</h4>
+				<h4 class="value">21°C</h4>
+			</div>
+		<br>
+			<div class="box">
+				<h4 class="day">Friday</h4>
+				<h4 class="value">18°C</h4>
+			</div>
+			<div class="box">
+				<h4 class="day">Saturday</h4>
+				<h4 class="value">19°C</h4>
+			</div>
+		</div>
+
 	
 </div>
 </body>
@@ -33,3 +53,4 @@ fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lo
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
+
