@@ -4,7 +4,11 @@ body{
     margin: 0px;
     font-family: 'Titillium Web',sans-serif;
     background-image: url("https://source.unsplash.com/1600x900/?nature,water");
-}
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    min-height: 99vh;
+}                                                                                                                                                                                                 
 .container{
     max-width: 1140px;
     margin: 0px auto;
