@@ -36,7 +36,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 			</div>
 		</div>
 
-	
 </div>
 </body>
 `
@@ -45,12 +44,12 @@ const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '7086ebf5a7mshfdff4f9d6868d3ep193a9bjsna773559ed875',
-		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
+		'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
 	}
 };
 
-fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5', options)
+
+fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=Bratislava', options)
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
-
