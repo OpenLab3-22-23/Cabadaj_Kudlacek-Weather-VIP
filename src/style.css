@@ -17,12 +17,11 @@ body{
     font-weight: 700;
     font-size: 48px;
     color: white;
-    margin-top: 10px;
-
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .formular{
     text-align: center;
-    padding-top: 15px;
 }
 .search-bar{
     width: 400px;
@@ -64,14 +63,22 @@ body{
 .city{
     font-size: 30px;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 .cover{
     max-width: 1140px;
     display: inline-flex;
     flex-wrap: nowrap;
-    margin-left: 8px;
-    margin-top: 95px;
+    margin-top: 52px;
+    padding-left: 8px;
+    justify-content: space-around;
   }
+.now{
+    display: inline-flex;
+    float: right;
+    margin-right: 50px;
+    margin-top: 10px;
+}
 .box{
 	margin: 10px;
 	text-align: center;

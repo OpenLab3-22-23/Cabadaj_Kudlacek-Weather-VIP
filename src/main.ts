@@ -11,12 +11,17 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 	</div>
 
 	<div class="today">
+	  <div class="now">
+	  <div class="now_info">
 		<h4 class="city">....</h4>
 		<div class="temp">°C</div>
 		<div class="windspeed">6.2 km/h</div>
 		<div class="typeOfWeather">Sunny</div>
-
+	  </div>
+	  </div>
 		<div class="cover">
+
+
 			<div class="box">
 				<h4 class="day">Wednesday</h4>
 				<h4 class="value">20°C</h4>
@@ -35,6 +40,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 				<h4 class="value">19°C</h4>
 			</div>
 		</div>
+		
 
 </div>
 </body>
