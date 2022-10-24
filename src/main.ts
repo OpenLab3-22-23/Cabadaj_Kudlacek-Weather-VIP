@@ -11,10 +11,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 	</div>
 
 	<div class="today">
-		<h4 class="city">Bratislava</h4>
-		<div class="celsius">19°C</div>
-		<div class="temp">Sunny</div>
-		<div class="days">18.10.2022</div>
+		<h4 class="city">....</h4>
+		<div class="temp">°C</div>
+		<div class="windspeed">6.2 km/h</div>
+		<div class="typeOfWeather">Sunny</div>
 
 		<div class="cover">
 			<div class="box">
@@ -40,16 +40,50 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 </body>
 `
 
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '7086ebf5a7mshfdff4f9d6868d3ep193a9bjsna773559ed875',
-		'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
-	}
-};
 
-
-fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=Bratislava', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+let weather = {
+	apiKey: "4ed9898ef0d4415dd8423a2a74b26ef8",
+	fetchWeather: function (city) {
+	  fetch(
+		"https://api.openweathermap.org/data/2.5/weather?q=" +
+		  city +
+		  "&units=metric&appid=" +
+		  this.apiKey
+	  )
+		.then((response) => {
+		  if (!response.ok) {
+			alert("No weather found.");
+			throw new Error("No weather found.");
+		  }
+		  return response.json();
+		})
+		.then((data) => this.displayWeather(data));
+	},
+	displayWeather: function (data) {
+	  const { name } = data;
+	  const { temp } = data.main;
+	  const { speed } = data.wind;
+	  const { description } = data.weather[0];
+	  document.querySelector(".city")!.innerText =   name;
+	  document.querySelector(".temp")!.innerText = temp + "°C";
+	  document.querySelector(".windspeed")!.innerText = speed + " km/h";
+	  document.querySelector(".typeOfWeather")!.innerText = description;
+	  
+	},
+	search: function () {
+	  this.fetchWeather(document.querySelector(".search-bar")!.value);
+	},
+  };
+  
+  document.querySelector(".btn")!.addEventListener("button", function () {
+	weather.search();
+  });
+  
+  document
+	.querySelector(".search-bar")
+	.addEventListener("keyup", function (event) {
+	  if (event.key == "Enter") {
+		weather.search();
+	  }
+	});
+	weather.fetchWeather("...");
