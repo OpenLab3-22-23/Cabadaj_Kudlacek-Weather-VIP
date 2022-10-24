@@ -17,6 +17,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 		<div class="temp">°C</div>
 		<div class="windspeed">6.2 km/h</div>
 		<div class="typeOfWeather">Sunny</div>
+		<img src="https://openweathermap.org/img/wn/04n.png" alt="" class="iconweather" />
 	  </div>
 	  </div>
 		<div class="cover">
@@ -69,11 +70,12 @@ let weather = {
 	  const { name } = data;
 	  const { temp } = data.main;
 	  const { speed } = data.wind;
-	  const { description } = data.weather[0];
+	  const { icon, description } = data.weather[0];
 	  document.querySelector(".city")!.innerText =   name;
 	  document.querySelector(".temp")!.innerText = temp + "°C";
 	  document.querySelector(".windspeed")!.innerText = speed + " km/h";
 	  document.querySelector(".typeOfWeather")!.innerText = description;
+	  document.querySelector(".iconweather").src ="https://openweathermap.org/img/wn/" + icon + ".png";
 	  
 	},
 	search: function () {
