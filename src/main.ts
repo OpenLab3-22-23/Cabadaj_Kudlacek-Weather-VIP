@@ -11,13 +11,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 	</div>
 
 	<div class="today">
-	  <div class="now">
+	<div class="now">
+	<img src="https://openweathermap.org/img/wn/04n.png" alt="" class="iconweather" />
 	  <div class="now_info">
 		<h4 class="city">....</h4>
 		<div class="temp">°C</div>
 		<div class="windspeed">6.2 km/h</div>
 		<div class="typeOfWeather">Sunny</div>
-		<img src="https://openweathermap.org/img/wn/04n.png" alt="" class="iconweather" />
+
 	  </div>
 	  </div>
 		<div class="cover">
@@ -31,7 +32,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 				<h4 class="day">Thursday</h4>
 				<h4 class="value">21°C</h4>
 			</div>
-		<br>
 			<div class="box">
 				<h4 class="day">Friday</h4>
 				<h4 class="value">18°C</h4>
